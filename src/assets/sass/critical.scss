@@ -13,50 +13,15 @@
 @media only screen and (min-width: 0rem) {
     #hero-143 {
         /* Centers button */
-        text-align: center;
+        text-align: left; /* DÉJÀ BON */
         /* 144px - 300px - leaving extra space for the navigation */
         padding: clamp(9rem, 25.95vw, 18.75rem) calc(16 / 16 * 1rem) 0;
         /* 130px - 450px */
-        padding-bottom: clamp(12.125rem, 30.95vw, 28.125rem);
+        padding-bottom: clamp(6rem, 15vw, 13rem);
         position: relative;
         z-index: 1;
         /* Prevents white rectangle pseudos from overlapping the sections below */
         overflow: hidden;
-
-        &:before {
-            /* Left side of the triangle */
-            content: "";
-            width: calc(500 / 16 * 1rem);
-            /* make really long so it covers the whole screen all the way to desktop */
-            height: calc(4000 / 16 * 1rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(-67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: calc(-2235 / 16 * 1rem);
-            /* this makes the right edge sit at the 50% line at all times */
-            right: 50%;
-            z-index: 0;
-        }
-
-        &:after {
-            /* Right side of the triangle */
-            content: "";
-            width: calc(500 / 16 * 1rem);
-            height: calc(4000 / 16 * 1rem);
-            background: #fff;
-            opacity: 1;
-            transform: rotate(67deg);
-            transform-origin: center;
-            position: absolute;
-            display: block;
-            bottom: calc(-2235 / 16 * 1rem);
-            /* this makes the left edge sit at the 50% line at all times */
-            left: 50%;
-            z-index: 0;
-        }
 
         .cs-background {
             width: 100%;
@@ -104,10 +69,10 @@
             font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
             font-weight: 700;
             line-height: 1.2em;
-            text-align: center;
+            text-align: left; /* CHANGÉ: center -> left */
             max-width: calc(829 / 16 * 1rem);
             /* 16px - 24px */
-            margin: 0 auto clamp(1rem, 4vw, 1.5rem);
+            margin: 0 0 clamp(1rem, 4vw, 1.5rem) 0; /* CHANGÉ: 0 auto -> 0 */
             color: #fff;
             position: relative;
 
@@ -119,7 +84,7 @@
                 /* 4px - 8px */
                 height: clamp(0.25rem, 0.8vw, 0.5rem);
                 /* 16px - 24px */
-                margin: clamp(1rem, 4vw, 1.5rem) auto clamp(1rem, 4vw, 1.5rem);
+                margin: clamp(1rem, 4vw, 1.5rem) 0 clamp(1rem, 4vw, 1.5rem) 0; /* CHANGÉ: auto -> 0 */
                 background: var(--primary);
                 opacity: 1;
                 position: relative;
@@ -131,14 +96,20 @@
             /* 16px - 25px */
             font-size: clamp(1rem, 1.95vw, 1.5625rem);
             line-height: 1.5em;
-            text-align: center;
+            text-align: left; /* CHANGÉ: center -> left */
             width: 100%;
             /* 464px - 800px */
             max-width: clamp(29rem, 60vw, 50rem);
-            margin: 0 auto;
-            /* 40px - 48px */
-            margin-bottom: clamp(2.5rem, 4vw, 3rem);
+            margin: 0 0 clamp(2.5rem, 4vw, 3rem) 0; /* CHANGÉ: 0 auto -> 0 */
             color: #fff;
+        }
+        
+        /* AJOUTÉ: Style pour le bouton */
+        .cs-button-solid {
+            margin-left: 0; /* Garde le bouton à gauche */
+            display: inline-block;
+            /* AJOUTÉ: pour descendre le bouton */
+            margin-top: clamp(1.5rem, 3vw, 2.5rem); /* Descend le bouton */
         }
     }
 }
@@ -156,6 +127,24 @@
         .cs-background {
             img {
                 display: none;
+            }
+        }
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #hero-143 {
+            &:before,
+            &:after {
+                background: var(--dark);
+            }
+
+            .cs-background {
+                &:before {
+                    opacity: 0.85;
+                }
             }
         }
     }
