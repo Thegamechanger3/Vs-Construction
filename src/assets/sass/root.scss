@@ -1498,3 +1498,37 @@
 		}
 	}
 }
+
+
+
+#cs-footer-275 {
+	.cs-footer-bottom {
+	  border-top: 1px solid rgba(245, 242, 238, 0.15);
+	  margin-top: 2rem;
+	  padding-top: 1.25rem;
+	}
+  
+	.cs-footer-bottom-inner {
+	  width: min(1200px, 100%);
+	  margin: 0 auto;
+	  text-align: center;
+	}
+  
+	.cs-footer-bottom p {
+	  margin: 0;
+	  font-size: 0.9rem;
+	  color: rgba(245, 242, 238, 0.75);
+	  font-family: var(--bodyFont);
+	}
+  
+	.cs-footer-bottom a {
+	  color: #8F857C;
+	  text-decoration: none;
+	  font-weight: 500;
+	  transition: opacity 0.3s;
+	}
+  
+	.cs-footer-bottom a:hover {
+	  opacity: 0.7;
+	}
+  }
