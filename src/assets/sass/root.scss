@@ -876,8 +876,7 @@
     box-sizing: border-box;
     /* 12px - 24px */
     padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-    background-color: #fff;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background-color: transparent;
     /* 12px - 24px */
     border-radius: 0;
     display: flex;
@@ -926,6 +925,7 @@
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+	color: #ffffff !important;
   }
   #cs-navigation .cs-phone {
     font-size: 1rem;
@@ -938,6 +938,7 @@
     align-items: center;
     gap: 0.5rem;
     transition: opacity 0.3s, color 0.3s;
+	color: #ffffff !important;
   }
   #cs-navigation .cs-phone-icon {
     width: 1.5rem;
@@ -979,6 +980,8 @@
     display: block;
     transition: opacity 0.3s;
   }
+
+
   #cs-navigation .cs-ul-wrapper {
     height: 100%;
     display: flex;
@@ -1014,7 +1017,7 @@
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
-    color: var(--headerColor);
+    color: white;
     display: block;
     position: relative;
     transition: color 0.3s;
@@ -1062,6 +1065,39 @@
   #cs-navigation .cs-button-solid:hover:before {
     width: 100%;
   }
+
+  /* Style du bouton Devis */
+    #cs-navigation .cs-button-devis {
+        font-size: 0.875rem;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 0.75rem 1.5rem;
+        background: #FFFFFF;  /* Couleur or */
+        color: #0a0a08;  /* Noir */
+        text-decoration: none;
+        border: 1px solid #7A1C1C;
+        transition: all 0.3s ease;
+        display: inline-block;
+        white-space: nowrap;
+    }
+    
+    #cs-navigation .cs-button-devis:hover {
+        background: #7A1C1C;
+        color: #FFFFFF;
+    }
+    
+    /* Au scroll, garder le même style ou ajuster */
+    body.scroll #cs-navigation .cs-button-devis {
+        background: #7A1C1C;
+        color: #0a0a08;
+    }
+    
+    body.scroll #cs-navigation .cs-button-devis:hover {
+        background: transparent;
+        color: #7A1C1C;
+    }
+
 }
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
