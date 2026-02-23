@@ -691,3 +691,718 @@
   }
 }
 
+/*-- -------------------------- -->
+<---   À PROPOS - RESPONSIVE     -->
+<--- -------------------------- -*/
+
+/* Large Desktop jusqu'à 1200px */
+@media only screen and (max-width: 75rem) {
+    .page-header {
+        padding: 80px 40px 70px;
+        gap: 60px;
+    }
+    
+    .intro-content {
+        padding: 60px 40px;
+    }
+    
+    .chiffre-item {
+        padding: 36px 30px;
+    }
+    
+    .chiffre-num {
+        font-size: 48px;
+    }
+    
+    .histoire {
+        padding: 90px 40px;
+    }
+    
+    .valeurs {
+        padding: 90px 40px;
+    }
+    
+    .valeur-card {
+        padding: 40px 36px;
+    }
+    
+    .engagements {
+        padding: 80px 40px;
+        gap: 60px;
+    }
+}
+
+/* Desktop - 1024px */
+@media only screen and (max-width: 64rem) {
+    .page-header {
+        padding: 70px 32px 60px;
+        gap: 40px;
+    }
+    
+    .page-header::before {
+        font-size: 200px;
+        bottom: -40px;
+    }
+    
+    .page-title {
+        font-size: clamp(52px, 6vw, 80px);
+    }
+    
+    .founded-badge {
+        padding: 14px 22px;
+    }
+    
+    .founded-year {
+        font-size: 36px;
+    }
+    
+    .intro {
+        min-height: auto;
+    }
+    
+    .intro-content {
+        padding: 48px 32px;
+    }
+    
+    .intro-title {
+        font-size: clamp(24px, 3vw, 32px);
+        margin-bottom: 20px;
+    }
+    
+    .intro-text {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+    
+    .intro-signature {
+        margin-top: 28px;
+        padding-top: 24px;
+    }
+    
+    .chiffre-item {
+        padding: 32px 24px;
+    }
+    
+    .chiffre-num {
+        font-size: 42px;
+    }
+    
+    .chiffre-num sup {
+        font-size: 20px;
+    }
+    
+    .chiffre-label {
+        font-size: 10px;
+    }
+    
+    .chiffre-desc {
+        font-size: 12px;
+    }
+    
+    .histoire {
+        padding: 80px 32px;
+    }
+    
+    .histoire-header {
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .tl-year {
+        font-size: 28px;
+    }
+    
+    .tl-title {
+        font-size: 17px;
+    }
+    
+    .valeurs {
+        padding: 80px 32px;
+    }
+    
+    .valeurs-header {
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .valeur-card {
+        padding: 36px 28px;
+    }
+    
+    .valeur-num {
+        font-size: 64px;
+    }
+    
+    .valeur-title {
+        font-size: 20px;
+    }
+    
+    .engagements {
+        padding: 70px 32px;
+        gap: 50px;
+    }
+    
+    .eng-left .section-title {
+        font-size: clamp(40px, 5vw, 60px);
+    }
+    
+    .eng-item {
+        padding: 20px 0;
+    }
+    
+    .btn-primary {
+        padding: 14px 32px;
+    }
+}
+
+/* Tablet - 900px (point de bascule) */
+@media only screen and (max-width: 56.25rem) {
+    .page-header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 50px 24px 40px;
+        margin-top: 70px;
+    }
+    
+    .page-header::before {
+        font-size: 160px;
+        bottom: -30px;
+        right: 0;
+    }
+    
+    .breadcrumb {
+        margin-bottom: 20px;
+    }
+    
+    .section-label {
+        margin-bottom: 12px;
+    }
+    
+    .page-header-right p {
+        font-size: 14px;
+    }
+    
+    .intro {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-img-wrap {
+        min-height: 380px;
+    }
+    
+    .intro-img-overlay {
+        background: linear-gradient(to top, transparent 55%, rgba(244,244,244,.4));
+    }
+    
+    .intro-content {
+        padding: 48px 24px;
+    }
+    
+    .chiffres {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .chiffre-item {
+        padding: 32px 24px;
+        border-right: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .chiffre-item:nth-child(2n) {
+        border-right: none;
+    }
+    
+    .chiffre-item:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .histoire {
+        padding: 70px 24px;
+    }
+    
+    .histoire-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .histoire-desc {
+        font-size: 14px;
+    }
+    
+    .timeline-h {
+        padding-top: 20px;
+    }
+    
+    .timeline-h-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 30px;
+    }
+    
+    .timeline-h-line,
+    .timeline-h-progress {
+        display: none;
+    }
+    
+    .tl-item {
+        padding: 0;
+    }
+    
+    .tl-text {
+        max-width: 100%;
+    }
+    
+    .valeurs {
+        padding: 70px 24px;
+    }
+    
+    .valeurs-header {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .valeurs-desc {
+        font-size: 14px;
+    }
+    
+    .valeurs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .valeur-card {
+        padding: 36px 28px;
+    }
+    
+    .engagements {
+        grid-template-columns: 1fr;
+        padding: 60px 24px;
+        gap: 40px;
+    }
+    
+    .eng-left {
+        text-align: center;
+    }
+    
+    .eng-left .section-label {
+        justify-content: center;
+    }
+    
+    .eng-left .section-label::before {
+        display: none;
+    }
+    
+    .eng-left p {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Mobile - 600px */
+@media only screen and (max-width: 37.5rem) {
+    .page-header {
+        padding: 40px 20px 32px;
+    }
+    
+    .page-header::before {
+        font-size: 120px;
+        bottom: -20px;
+    }
+    
+    .breadcrumb {
+        font-size: 10px;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+    
+    .section-label::before {
+        width: 24px;
+    }
+    
+    .section-label span {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+    
+    .page-title {
+        font-size: 42px;
+    }
+    
+    .founded-badge {
+        padding: 12px 18px;
+        gap: 16px;
+    }
+    
+    .founded-year {
+        font-size: 32px;
+    }
+    
+    .founded-text {
+        font-size: 10px;
+        line-height: 1.5;
+    }
+    
+    .intro-img-wrap {
+        min-height: 280px;
+    }
+    
+    .intro-content {
+        padding: 40px 20px;
+    }
+    
+    .intro-title {
+        font-size: 24px;
+    }
+    
+    .intro-text {
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+    
+    .intro-signature {
+        margin-top: 24px;
+        padding-top: 20px;
+        gap: 12px;
+    }
+    
+    .sig-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+    
+    .sig-name {
+        font-size: 16px;
+    }
+    
+    .sig-role {
+        font-size: 10px;
+    }
+    
+    .chiffres {
+        grid-template-columns: 1fr;
+    }
+    
+    .chiffre-item {
+        padding: 28px 24px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .chiffre-item:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    
+    .chiffre-item:last-child {
+        border-bottom: none;
+    }
+    
+    .chiffre-num {
+        font-size: 48px;
+    }
+    
+    .histoire {
+        padding: 60px 20px;
+    }
+    
+    .timeline-h-items {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .tl-item {
+        text-align: left;
+        padding-left: 20px;
+        position: relative;
+    }
+    
+    .tl-dot {
+        margin-left: 0;
+        margin-right: 0;
+        position: absolute;
+        left: 0;
+        top: 6px;
+    }
+    
+    .tl-year {
+        font-size: 26px;
+        margin-bottom: 4px;
+    }
+    
+    .tl-title {
+        font-size: 16px;
+        margin-bottom: 6px;
+    }
+    
+    .tl-text {
+        font-size: 12px;
+    }
+    
+    .valeurs {
+        padding: 60px 20px;
+    }
+    
+    .valeur-card {
+        padding: 32px 24px;
+    }
+    
+    .valeur-num {
+        font-size: 56px;
+        top: 6px;
+        right: 16px;
+    }
+    
+    .valeur-icon {
+        width: 44px;
+        height: 44px;
+        margin-bottom: 20px;
+    }
+    
+    .valeur-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .valeur-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .valeur-desc {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    
+    .engagements {
+        padding: 50px 20px;
+        gap: 32px;
+    }
+    
+    .eng-left .section-title {
+        font-size: 36px;
+    }
+    
+    .eng-left p {
+        font-size: 14px;
+        margin-bottom: 28px;
+    }
+    
+    .eng-item {
+        gap: 16px;
+        padding: 18px 0;
+    }
+    
+    .eng-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .eng-icon svg {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .eng-content h3 {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+    
+    .eng-content p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+    
+    .btn-primary {
+        padding: 14px 28px;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+}
+
+/* Petit mobile - 400px */
+@media only screen and (max-width: 25rem) {
+    .page-title {
+        font-size: 36px;
+    }
+    
+    .founded-badge {
+        padding: 10px 14px;
+    }
+    
+    .founded-year {
+        font-size: 28px;
+    }
+    
+    .intro-img-wrap {
+        min-height: 220px;
+    }
+    
+    .intro-content {
+        padding: 32px 16px;
+    }
+    
+    .intro-title {
+        font-size: 22px;
+    }
+    
+    .intro-text {
+        font-size: 12px;
+    }
+    
+    .chiffre-item {
+        padding: 24px 20px;
+    }
+    
+    .chiffre-num {
+        font-size: 42px;
+    }
+    
+    .histoire {
+        padding: 50px 16px;
+    }
+    
+    .tl-item {
+        padding-left: 16px;
+    }
+    
+    .tl-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .tl-year {
+        font-size: 24px;
+    }
+    
+    .valeurs {
+        padding: 50px 16px;
+    }
+    
+    .valeur-card {
+        padding: 28px 20px;
+    }
+    
+    .valeur-num {
+        font-size: 48px;
+    }
+    
+    .engagements {
+        padding: 40px 16px;
+    }
+    
+    .eng-left .section-title {
+        font-size: 32px;
+    }
+    
+    .eng-item {
+        gap: 12px;
+    }
+    
+    .eng-icon {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* Très petit mobile - 360px */
+@media only screen and (max-width: 22.5rem) {
+    .page-header {
+        padding: 32px 16px 28px;
+    }
+    
+    .page-header::before {
+        font-size: 90px;
+    }
+    
+    .page-title {
+        font-size: 32px;
+    }
+    
+    .founded-badge {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .intro-content {
+        padding: 28px 14px;
+    }
+    
+    .intro-title {
+        font-size: 20px;
+    }
+    
+    .intro-text {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+    
+    .intro-signature {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .chiffre-num {
+        font-size: 38px;
+    }
+    
+    .chiffre-label {
+        font-size: 9px;
+    }
+    
+    .chiffre-desc {
+        font-size: 11px;
+    }
+    
+    .tl-year {
+        font-size: 22px;
+    }
+    
+    .tl-title {
+        font-size: 15px;
+    }
+    
+    .tl-text {
+        font-size: 11px;
+    }
+    
+    .valeur-num {
+        font-size: 42px;
+    }
+    
+    .valeur-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .valeur-title {
+        font-size: 17px;
+    }
+    
+    .valeur-desc {
+        font-size: 12px;
+    }
+    
+    .eng-left .section-title {
+        font-size: 28px;
+    }
+    
+    .eng-left p {
+        font-size: 13px;
+    }
+    
+    .eng-content h3 {
+        font-size: 15px;
+    }
+    
+    .eng-content p {
+        font-size: 11px;
+    }
+    
+    .btn-primary {
+        padding: 12px 24px;
+        font-size: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}
