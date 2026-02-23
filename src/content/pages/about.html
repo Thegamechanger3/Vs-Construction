@@ -14,95 +14,197 @@ permalink: "/about/"
 
 {% block body %}
 
-    <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">About Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/about/" class="cs-link cs-active">About Us</a>
-            </div>
-        </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+<!-- ============================================ -->
+<!--              À PROPOS - VS CONSTRUCTION      -->
+<!-- ============================================ -->
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="/">Accueil</a><span>/</span><span class="current">À Propos</span></div>
+    <div class="section-label"><span>Notre entreprise</span></div>
+    <h1 class="page-title">QUI<br><span class="outline">SOMMES</span>-NOUS</h1>
+  </div>
+  <div class="page-header-right">
+    <p>VS Construction, c'est une entreprise familiale créée en 2008 au Luxembourg. On n'est pas une grande société — et c'est exactement ce qui fait notre force. Une équipe soudée, un travail soigné, des clients qui nous recommandent.</p>
+    <div class="founded-badge">
+      <div class="founded-year">2008</div>
+      <div class="founded-text">Fondée au<br>Luxembourg</div>
     </div>
+  </div>
+</div>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
+<!-- INTRO SPLIT -->
+<div class="intro">
+  <div class="intro-img-wrap">
+    <img class="intro-img" src="/assets/images/actionchantier.jpg" alt="Équipe VS Construction sur chantier">
+    <div class="intro-img-overlay"></div>
+  </div>
+  <div class="intro-content">
+    <div class="section-label reveal"><span>Notre histoire</span></div>
+    <h2 class="intro-title reveal reveal-delay-1">Une entreprise <em>construite à la main</em>, chantier après chantier</h2>
+    <p class="intro-text reveal reveal-delay-2">VS Construction a démarré en 2008 avec <strong>ses fondateurs</strong> et une camionnette. Quinze ans plus tard, on est une équipe de professionnels passionnés. On n'a pas cherché à grossir à tout prix — on a cherché à bien faire.</p>
+    <p class="intro-text reveal reveal-delay-2">Notre clientèle, c'est essentiellement <strong>des particuliers au Luxembourg et dans la Grande Région</strong>. Des gens qui ont un projet de maison, une extension à faire, une rénovation complète. On travaille avec eux directement, sans sous-traitance, sans intermédiaire.</p>
+    <p class="intro-text reveal reveal-delay-2">Ce qui fait notre réputation depuis le début, c'est simple : on arrive à l'heure, on fait ce qu'on a dit, et on laisse le chantier propre. Les clients nous recommandent à leurs voisins, leurs amis, leur famille. C'est comme ça qu'on grandit.</p>
+    <div class="intro-signature reveal">
+      <div class="sig-avatar">VS</div>
+      <div>
+        <div class="sig-name">L'équipe VS Construction</div>
+        <div class="sig-role">Artisans passionnés — Luxembourg</div>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <section id="RPsbs-313">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-image-group">
-                <picture class="cs-picture cs-picture1">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 802, height: 892 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 1044, height: 1162 }) | jpeg %}" alt="lawyers" width="522" height="581" decoding="async">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 366, height: 354 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 600, height: 578 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 780, height: 752 }) | jpeg %}" alt="gavel" width="390" height="376" loading="lazy" decoding="async">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-content">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About CodeStitch</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-quote">
-                    <span class="cs-quote-text">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </span>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img class="cs-quote-icon" loading="lazy" decoding="async" src="/assets/svgs/quote.svg" alt="gavel" width="136" height="77">
-                </div>
-                <a href="/contact/" class="cs-button-solid">Get in Touch</a>
-            </div>
-        </div>
-    </section>
+<!-- CHIFFRES -->
+<div class="chiffres">
+  <div class="chiffre-item">
+    <div class="chiffre-num">15<sup>+</sup></div>
+    <div class="chiffre-label">Ans d'activité</div>
+    <div class="chiffre-desc">Fondée en 2008 au Luxembourg</div>
+  </div>
+  <div class="chiffre-item">
+    <div class="chiffre-num">250<sup>+</sup></div>
+    <div class="chiffre-label">Chantiers réalisés</div>
+    <div class="chiffre-desc">Maisons, extensions, rénovations</div>
+  </div>
+  <div class="chiffre-item">
+    <div class="chiffre-num">100<sup>%</sup></div>
+    <div class="chiffre-label">Clients satisfaits</div>
+    <div class="chiffre-desc">Bouche-à-oreille et recommandations</div>
+  </div>
+  <div class="chiffre-item">
+    <div class="chiffre-num">10<sup>ans</sup></div>
+    <div class="chiffre-label">Garantie décennale</div>
+    <div class="chiffre-desc">Assurance à jour, attestation fournie</div>
+  </div>
+</div>
+
+<!-- NOTRE HISTOIRE TIMELINE -->
+<section class="histoire">
+  <div class="histoire-header">
+    <div>
+      <div class="section-label reveal"><span>15 ans de chantiers</span></div>
+      <h2 class="reveal reveal-delay-1" style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,50px);font-weight:400;line-height:1.1;">Les grandes <em style="font-style:italic;color:var(--primary);">étapes</em></h2>
+    </div>
+    <p class="histoire-desc reveal reveal-delay-2">De la création de l'entreprise à aujourd'hui, voici les moments qui ont forgé VS Construction.</p>
+  </div>
+
+  <div class="timeline-h">
+    <div class="timeline-h-line"></div>
+    <div class="timeline-h-progress" id="tlProgress"></div>
+    <div class="timeline-h-items">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2008</div>
+        <h3 class="tl-title">Les débuts</h3>
+        <p class="tl-text">Création de VS Construction. Premiers chantiers de maçonnerie et rénovation dans la région. Tout démarre à la force du travail et du bouche-à-oreille.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2012</div>
+        <h3 class="tl-title">On s'agrandit</h3>
+        <p class="tl-text">L'équipe se développe. Acquisition de notre propre matériel et premiers grands chantiers d'extension et de construction neuve.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2018</div>
+        <h3 class="tl-title">Spécialisation</h3>
+        <p class="tl-text">On se spécialise dans les extensions et surélévations. Notre savoir-faire dans ce domaine devient notre marque de fabrique.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2024</div>
+        <h3 class="tl-title">15 ans, même état d'esprit</h3>
+        <p class="tl-text">Toujours la même exigence, toujours en direct avec nos clients. On a grandi sans perdre ce qui fait notre force : la proximité et la qualité.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALEURS -->
+<section class="valeurs">
+  <div class="valeurs-header">
+    <div>
+      <div class="section-label reveal"><span>Ce qui nous définit</span></div>
+      <h2 class="reveal reveal-delay-1" style="font-family:'DM Serif Display',serif;font-size:clamp(32px,4vw,50px);font-weight:400;line-height:1.1;">Nos <em style="font-style:italic;color:var(--primary);">valeurs</em> au quotidien</h2>
+    </div>
+    <p class="valeurs-desc reveal reveal-delay-2">Pas des mots sur un mur. Des façons de travailler que nos clients voient dès le premier rendez-vous.</p>
+  </div>
+
+  <div class="valeurs-grid">
+    <div class="valeur-card reveal">
+      <div class="valeur-num">01</div>
+      <div class="valeur-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+      <h3 class="valeur-title">On travaille en direct</h3>
+      <p class="valeur-desc">Pas de sous-traitance, pas d'intermédiaires. Quand vous signez avec VS Construction, c'est nous qui sommes sur votre chantier du début à la fin.</p>
+    </div>
+    <div class="valeur-card reveal reveal-delay-1">
+      <div class="valeur-num">02</div>
+      <div class="valeur-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <h3 class="valeur-title">La parole donnée, on la tient</h3>
+      <p class="valeur-desc">Un devis signé, c'est un engagement. On ne revient pas dessus sans vous prévenir. Pas de surprise sur la facture finale.</p>
+    </div>
+    <div class="valeur-card reveal">
+      <div class="valeur-num">03</div>
+      <div class="valeur-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-5.5 8-11a8 8 0 00-16 0c0 5.5 8 11 8 11z"/><circle cx="12" cy="11" r="3"/></svg></div>
+      <h3 class="valeur-title">Ancrés au Luxembourg</h3>
+      <p class="valeur-desc">On connaît les fournisseurs locaux, les matériaux adaptés, et les contraintes administratives de chaque commune luxembourgeoise.</p>
+    </div>
+    <div class="valeur-card reveal reveal-delay-1">
+      <div class="valeur-num">04</div>
+      <div class="valeur-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h3 class="valeur-title">Le temps qu'il faut, pas plus</h3>
+      <p class="valeur-desc">On donne un planning réaliste, on s'y tient, et on prend le temps de bien faire plutôt que de faire vite.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGEMENTS -->
+<div class="engagements">
+  <div class="eng-left">
+    <div class="section-label reveal"><span>Nos engagements concrets</span></div>
+    <div class="section-title reveal reveal-delay-1">
+      CE QU'ON<br>
+      <span class="outline">VOUS</span><br>
+      <span class="accent">GARANTIT</span>
+    </div>
+    <p class="reveal reveal-delay-2">Des engagements simples, pas des promesses marketing. Ce sont des choses que nos clients vérifient chantier après chantier depuis 15 ans.</p>
+    <a href="/contact/" class="btn-primary reveal reveal-delay-3">Demander un devis</a>
+  </div>
+  <div class="eng-list">
+    <div class="eng-item reveal">
+      <div class="eng-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+      <div class="eng-content">
+        <h3>Devis écrit et détaillé, gratuit</h3>
+        <p>On se déplace sur place avant de chiffrer. Le devis liste chaque poste clairement — pas de ligne "divers".</p>
+      </div>
+    </div>
+    <div class="eng-item reveal reveal-delay-1">
+      <div class="eng-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="1"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+      <div class="eng-content">
+        <h3>Assurance décennale valide</h3>
+        <p>Notre assurance décennale est à jour. On vous fournit l'attestation avant de démarrer.</p>
+      </div>
+    </div>
+    <div class="eng-item reveal reveal-delay-2">
+      <div class="eng-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <div class="eng-content">
+        <h3>Un interlocuteur direct</h3>
+        <p>Pas de standard, pas de chef de chantier anonyme. Si vous avez une question, vous appelez, on répond.</p>
+      </div>
+    </div>
+    <div class="eng-item reveal reveal-delay-3">
+      <div class="eng-icon"><svg viewBox="0 0 24 24"><polyline points="3,6 5,6 21,6"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/><path d="M9 6V4h6v2"/></svg></div>
+      <div class="eng-content">
+        <h3>Chantier rendu propre</h3>
+        <p>On enlève les gravats, on nettoie et on remet les accès en état avant de partir.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
     {% include 'sections/cta.html' %}
-
+<script defer src="/assets/js/about.js"></script>
 {% endblock %}
