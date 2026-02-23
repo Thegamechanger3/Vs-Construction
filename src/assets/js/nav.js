@@ -248,4 +248,5 @@
 	// Initialize navigation system
 	init.inertState();
 	init.eventListeners();
+
 })();

@@ -43,6 +43,10 @@
         <title>{{ title }}</title>
     </head>
     <body>
+        <!-- Curseur personnalisé -->
+        <div class="cursor" id="cursor"></div>
+        <div class="cursor-ring" id="cursorRing"></div>
+
         <!--Screen reader skip main nav-->
         <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
@@ -51,6 +55,8 @@
             {% block body %}{% endblock %}
         </main>
         {% include "sections/footer.html" %}
+
+        <script defer src="/assets/js/cursor.js"></script>
 
     </body>
 </html>

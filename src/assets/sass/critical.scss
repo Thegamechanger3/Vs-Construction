@@ -18,51 +18,12 @@
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
         background: #0a0a08;
-        padding: 0;  /* On enlève le padding pour que ça prenne toute la hauteur */
+        padding: 0;
         z-index: 1;
-    }
-
-    .hero-bg {
-        position: absolute;
-        inset: 0;
-        background:
-            radial-gradient(ellipse 80% 80% at 70% 50%, rgba(212,168,67,0.04) 0%, transparent 60%),
-            linear-gradient(135deg, #0a0a08 0%, #1c1c1a 100%);
-        z-index: 1;
-    }
-
-    .grid-lines {
-        position: absolute;
-        inset: 0;
-        opacity: 0.06;
-        background-image:
-            linear-gradient(#c8b99a 1px, transparent 1px),
-            linear-gradient(90deg, #c8b99a 1px, transparent 1px);
-        background-size: 80px 80px;
-        animation: gridShift 20s linear infinite;
-        z-index: 2;
-    }
-
-    @keyframes gridShift {
-        0% { background-position: 0 0; }
-        100% { background-position: 80px 80px; }
-    }
-
-    .hero-watermark {
-        position: absolute;
-        bottom: -60px;
-        left: -20px;
-        font-family: 'Bebas Neue', sans-serif;
-        font-size: 380px;
-        line-height: 1;
-        color: transparent;
-        -webkit-text-stroke: 1px rgba(212,168,67,0.07);
-        pointer-events: none;
-        user-select: none;
-        z-index: 3;
     }
 
     .hero-left {
+        margin-top: 70px;
         position: relative;
         z-index: 10;
         display: flex;
@@ -96,7 +57,7 @@
 
     #hero-143 .hero-title {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: clamp(72px, 8vw, 110px);
+        font-size: clamp(48px, 8vw, 110px);
         line-height: 0.95;
         letter-spacing: 2px;
         margin-bottom: 32px;
@@ -117,15 +78,11 @@
         color: var(--primary);
     }
 
-    #hero-143 .cs-title:after {
-        display: none;  /* On cache l'ancien divider */
-    }
-
     #hero-143 .cs-text {
         max-width: 380px;
         line-height: 1.8;
         color: #8a8880;
-        font-size: 15px;
+        font-size: clamp(14px, 2vw, 15px);
         margin-bottom: 52px;
         opacity: 0;
         animation: fadeUp 1s 0.7s forwards;
@@ -135,17 +92,19 @@
 
     .hero-actions {
         display: flex;
+        flex-direction: row;
         align-items: center;
-        gap: 32px;
+        gap: 20px;
         opacity: 0;
         animation: fadeUp 1s 0.9s forwards;
     }
 
     .btn-primary {
-        padding: 16px 40px;
+        margin-top: 50px;
+        padding: clamp(12px, 2vw, 16px) clamp(24px, 4vw, 40px);
         background: var(--primary);
         color: #0a0a08;
-        font-size: 12px;
+        font-size: clamp(11px, 1.5vw, 12px);
         font-weight: 500;
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -156,6 +115,7 @@
         border: none;
         cursor: pointer;
         display: inline-block;
+        white-space: nowrap;
     }
 
     .btn-primary::after {
@@ -172,14 +132,16 @@
     }
 
     .btn-secondary {
+        margin-top: 50px;
         display: flex;
         align-items: center;
         gap: 10px;
         color: #8a8880;
-        font-size: 13px;
+        font-size: clamp(12px, 1.5vw, 13px);
         letter-spacing: 1px;
         text-decoration: none;
         transition: color 0.3s;
+        white-space: nowrap;
     }
 
     .btn-secondary:hover {
@@ -191,17 +153,12 @@
         font-size: 18px;
     }
 
-    .hero-right {
-        position: relative;
-        z-index: 5;
-        overflow: hidden;
-    }
-
     #hero-143 .cs-background {
         width: 100%;
         height: 100%;
         display: block;
         position: absolute;
+        background: rgba(0, 0, 0, 0.7);
         top: 0;
         left: 0;
         z-index: 1;
@@ -211,8 +168,6 @@
         content: "";
         width: 100%;
         height: 100%;
-        background: linear-gradient(to right, #0a0a08 0%, transparent 40%),
-                    linear-gradient(to top, rgba(10,10,8,0.6) 0%, transparent 50%);
         opacity: 1;
         position: absolute;
         display: block;
@@ -231,7 +186,7 @@
         object-fit: cover;
         transform: scale(1.05);
         animation: zoomOut 12s 0.4s forwards;
-        filter: grayscale(30%) brightness(0.7);
+        background: rgba(0, 0, 0, 0.7);
     }
 
     @keyframes zoomOut {
@@ -259,7 +214,7 @@
     }
 
     .stat-item {
-        padding: 32px 40px;
+        padding: clamp(16px, 3vw, 32px) clamp(20px, 3vw, 40px);
         border-right: 1px solid rgba(255,255,255,0.06);
         opacity: 0;
         animation: fadeUp 0.8s forwards;
@@ -272,7 +227,7 @@
 
     .stat-num {
         font-family: 'Bebas Neue', sans-serif;
-        font-size: 48px;
+        font-size: clamp(32px, 5vw, 48px);
         color: var(--primary);
         line-height: 1;
         display: flex;
@@ -281,12 +236,12 @@
     }
 
     .stat-num sup {
-        font-size: 22px;
+        font-size: clamp(16px, 2.5vw, 22px);
         color: #c8b99a;
     }
 
     .stat-label {
-        font-size: 11px;
+        font-size: clamp(10px, 1.5vw, 11px);
         letter-spacing: 2px;
         text-transform: uppercase;
         color: #8a8880;
@@ -310,38 +265,170 @@
     }
 }
 
-/* Tablet - 768px */
-@media only screen and (max-width: 48rem) {
+/* Petit desktop et tablette - 1024px */
+@media only screen and (max-width: 64rem) {
     #hero-143 {
         grid-template-columns: 1fr;
+        min-height: auto;
     }
 
     .hero-left {
-        padding: 100px 24px 60px;
+        padding: 120px 40px 60px;
+        order: 1;
+    }
+
+    .hero-right {
+        height: 50vh;
+        order: 2;
+        position: relative;
+    }
+
+    #hero-143 .hero-title {
+        font-size: clamp(48px, 10vw, 72px);
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+    }
+
+    .stats-bar {
+        position: relative;
+        grid-template-columns: repeat(4, 1fr);
+        order: 3;
+    }
+}
+
+/* Tablette - 768px */
+@media only screen and (max-width: 48rem) {
+    .hero-left {
+        padding: 100px 24px 40px;
+    }
+
+    #hero-143 .hero-title {
+        font-size: clamp(42px, 8vw, 56px);
+        line-height: 1.1;
+    }
+
+    #hero-143 .cs-text {
+        max-width: 100%;
+        margin-bottom: 32px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .btn-primary, 
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .btn-secondary {
+        justify-content: flex-start;
+    }
+
+    .btn-secondary::before {
+        content: '→';
+    }
+
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-item {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .stat-num {
+        justify-content: center;
     }
 
     .hero-right {
         height: 40vh;
     }
+}
+
+/* Mobile - 480px */
+@media only screen and (max-width: 30rem) {
+    .hero-left {
+        padding: 80px 20px 32px;
+    }
+
+    #hero-143 .hero-title {
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .hero-tag {
+        margin-bottom: 24px;
+    }
+
+    .hero-tag span {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .hero-tag::before {
+        width: 30px;
+    }
+
+    #hero-143 .cs-text {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 28px;
+    }
 
     .stats-bar {
-        grid-template-columns: repeat(2, 1fr);
-        position: relative;
+        grid-template-columns: 1fr;
     }
 
     .stat-item {
-        padding: 24px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        padding: 16px;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-num {
+        font-size: 36px;
+        justify-content: center;
+    }
+
+    .stat-label {
+        text-align: center;
+    }
+
+    .hero-right {
+        height: 35vh;
     }
 }
 
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #hero-143 .cs-title {
-        font-size: 110px;
+/* Petit mobile - 360px */
+@media only screen and (max-width: 22.5rem) {
+    .hero-left {
+        padding: 60px 16px 24px;
+    }
+
+    #hero-143 .hero-title {
+        font-size: 32px;
+    }
+
+    .btn-primary {
+        padding: 12px 20px;
+        font-size: 10px;
     }
 }
 
-/* Desktop - 1300px (To make image background parallax) */
+/* Desktop - 1300px (parallax) */
 @media only screen and (min-width: 81.25rem) {
     #hero-143 {
         background: url("/assets/images/landing.jpg");

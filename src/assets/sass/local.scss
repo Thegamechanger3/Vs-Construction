@@ -58,9 +58,6 @@
     font-size: 15px;
 }
 
-
-
-
 .projects {
     background: var(--bodyTextColorWhite, #FFFFFF);
     padding: 120px 60px;
@@ -177,42 +174,15 @@
     font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .projects {
-        padding: 80px 24px;
-    }
-    
-    .projects-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-    
-    .project-card:first-child {
-        grid-row: span 1;
-        min-height: 420px;
-    }
-    
-    .project-card:not(:first-child) {
-        min-height: 300px;
-    }
-    
-    .projects-footer {
-        flex-direction: column;
-        gap: 20px;
-        align-items: flex-start;
-    }
-}
-
 /*-- -------------------------- -->
-<---          Services          -->
+<---          SERVICES          -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #services-1188 {
         padding: var(--sectionPadding);
-        background-color: #ffffff;  /* steel color from Claude */
+        background-color: #ffffff;
         position: relative;
         overflow: hidden;
     }
@@ -241,7 +211,7 @@
         font-size: 11px;
         letter-spacing: 4px;
         text-transform: uppercase;
-        color: #7A1C1C;  /* gold color */
+        color: #7A1C1C;
         margin-bottom: 1rem;
         display: flex;
         align-items: center;
@@ -261,17 +231,17 @@
         font-weight: 400;
         line-height: 1.1;
         margin: 0 0 1.5rem 0;
-        color: black;  /* off-white */
+        color: black;
     }
 
     #services-1188 .cs-title em {
         font-style: italic;
-        color: #c8b99a;  /* sand color */
+        color: #c8b99a;
     }
 
     #services-1188 .cs-text {
         max-width: 650px;
-        color: #8a8880;  /* warm gray */
+        color: #8a8880;
         line-height: 1.8;
         font-size: 15px;
         margin: 0;
@@ -291,7 +261,7 @@
         list-style: none;
         margin: 0;
         padding: 3rem 2.5rem;
-        background: #F4F4F4;  /* steel */
+        background: #F4F4F4;
         position: relative;
         overflow: hidden;
         transition: background 0.4s ease;
@@ -308,7 +278,7 @@
         top: 0;
         width: 2px;
         height: 0;
-        background: #7A1C1C;  /* gold */
+        background: #7A1C1C;
         transition: height 0.4s ease;
         z-index: 2;
     }
@@ -318,7 +288,7 @@
     }
 
     #services-1188 .cs-item:hover {
-        background: #dfdfdfab;  /* concrete */
+        background: #dfdfdfab;
     }
 
     .cs-item-num {
@@ -381,14 +351,14 @@
         font-size: 0.75rem;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: #7A1C1C;  /* gold */
+        color: #7A1C1C;
         text-decoration: none;
         margin-top: auto;
         transition: color 0.3s ease;
     }
 
     #services-1188 .cs-link:hover {
-        color: #7A1C1C;  /* sand */
+        color: #7A1C1C;
     }
 
     #services-1188 .cs-button-solid {
@@ -429,33 +399,6 @@
         background: #7A1C1C;
     }
 }
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    #services-1188 .cs-card-group {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2px;
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    #services-1188 .cs-item {
-        padding: 3.5rem 3rem;
-    }
-}
-
-/* Dark Mode - si nécessaire */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode #services-1188 {
-        background-color: #0a0a08;
-    }
-    
-    body.dark-mode #services-1188 .cs-item {
-        background-color: #1c1c1a;
-    }
-}
-                
 
 /*-- -------------------------- -->
 <---      POURQUOI NOUS CHOISIR -->
@@ -565,37 +508,6 @@
     line-height: 1.7;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .why {
-        padding: 80px 24px;
-    }
-    
-    .why-grid {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-    
-    .why-img-wrap {
-        height: 380px;
-    }
-    
-    .why-img-wrap::before {
-        width: 80px;
-        height: 80px;
-        bottom: -8px;
-        right: -8px;
-    }
-    
-    .why-img-wrap::after {
-        width: 40px;
-        height: 40px;
-        top: -8px;
-        left: -8px;
-    }
-}
-
-
 /*-- -------------------------- -->
 <---         NOTRE MÉTHODE       -->
 <--- -------------------------- -*/
@@ -672,15 +584,97 @@
     line-height: 1.75;
 }
 
-/* Responsive */
+/*-- -------------------------- -->
+<---      RESPONSIVE GLOBAL      -->
+<--- -------------------------- -*/
+
+/* Large Desktop jusqu'à 1024px */
 @media (max-width: 1024px) {
+    /* Header responsive */
+    .section-header-2col {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+    
+    .section-desc {
+        font-size: 14px;
+    }
+    
+    /* Portfolio responsive */
+    .projects {
+        padding: 80px 24px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        margin-top: 40px;
+    }
+    
+    .project-card:first-child {
+        grid-row: span 1;
+        min-height: 420px;
+    }
+    
+    .project-card:not(:first-child) {
+        min-height: 300px;
+    }
+    
+    .projects-footer {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 40px;
+        padding-top: 24px;
+    }
+    
+    /* Services responsive */
+    #services-1188 .cs-card-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Why us responsive */
+    .why {
+        padding: 80px 24px;
+    }
+    
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+    
+    .why-img-wrap {
+        height: 380px;
+    }
+    
+    .why-img-wrap::before {
+        width: 80px;
+        height: 80px;
+        bottom: -8px;
+        right: -8px;
+    }
+    
+    .why-img-wrap::after {
+        width: 40px;
+        height: 40px;
+        top: -8px;
+        left: -8px;
+    }
+    
+    .why-intro {
+        margin-bottom: 32px;
+    }
+    
+    /* Process responsive */
     .process {
         padding: 80px 24px;
     }
     
     .process-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 48px;
+        margin-top: 48px;
     }
     
     .process-grid::before {
@@ -692,8 +686,107 @@
     }
 }
 
+/* Tablet jusqu'à 768px */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 32px;
+    }
+    
+    /* Services tablet */
+    #services-1188 .cs-card-group {
+        grid-template-columns: 1fr;
+    }
+    
+    #services-1188 .cs-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    #services-1188 .cs-picture {
+        width: 5rem;
+        height: 5rem;
+    }
+    
+    #services-1188 .cs-h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Portfolio tablet */
+    .project-info {
+        padding: 24px;
+    }
+    
+    .project-name {
+        font-size: 22px;
+    }
+    
+    .project-arrow {
+        width: 36px;
+        height: 36px;
+        top: 16px;
+        right: 16px;
+    }
+}
+
+/* Mobile jusqu'à 600px */
 @media (max-width: 600px) {
+    .section-title {
+        font-size: 28px;
+    }
+    
+    /* Process mobile */
     .process-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .process-step {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+    
+    /* Why mobile */
+    .why-feature {
+        gap: 16px;
+    }
+    
+    .feat-num {
+        font-size: 28px;
+        min-width: 30px;
+    }
+    
+    .feat-content h3 {
+        font-size: 16px;
+    }
+    
+    .feat-content p {
+        font-size: 12px;
+    }
+    
+    /* Services mobile */
+    #services-1188 .cs-button-solid {
+        padding: 1rem 2rem;
+        font-size: 0.7rem;
+    }
+    
+    /* Portfolio mobile */
+    .projects-footer .btn-primary {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Dark Mode - si nécessaire */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode #services-1188 {
+        background-color: #0a0a08;
+    }
+    
+    body.dark-mode #services-1188 .cs-item {
+        background-color: #1c1c1a;
+    }
+    
+    body.dark-mode #services-1188 .cs-h3,
+    body.dark-mode #services-1188 .cs-item-text {
+        color: #fff;
     }
 }
