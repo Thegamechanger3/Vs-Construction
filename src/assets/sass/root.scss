@@ -913,6 +913,7 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 100;
+	filter: brightness(0) saturate(100%) invert(8%) sepia(94%) saturate(2388%) hue-rotate(349deg) brightness(126%) contrast(88%);
   }
   #cs-navigation .cs-logo img {
     width: auto;
@@ -926,24 +927,6 @@
     align-items: center;
     gap: 1.5rem;
 	color: #ffffff !important;
-  }
-  #cs-navigation .cs-phone {
-    font-size: 1rem;
-    line-height: 1.5em;
-    text-decoration: none;
-    margin: 0;
-    color: var(--headerColor);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
-    transition: opacity 0.3s, color 0.3s;
-	color: #ffffff !important;
-  }
-  #cs-navigation .cs-phone-icon {
-    width: 1.5rem;
-    height: auto;
-    display: block;
   }
   #cs-navigation .cs-social {
     height: 2rem;
@@ -979,6 +962,10 @@
     opacity: 0.6;
     display: block;
     transition: opacity 0.3s;
+  }
+
+  #cs-navigation .cs-drop-icon {
+	filter: brightness(0) saturate(100%) invert(8%) sepia(94%) saturate(2388%) hue-rotate(349deg) brightness(126%) contrast(88%);
   }
 
 
@@ -1442,7 +1429,7 @@
     #cs-footer-269 .cs-social-link {
         width: 1.5rem;
         height: 1.5rem;
-        background-color: #4e4b66;
+        background-color: #7A1C1C;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -1463,6 +1450,54 @@
         display: block;
     }
 }
+
+/*-- -------------------------- -->
+<---   FOOTER BOTTOM BAR        -->
+<--- -------------------------- -*/
+
+#cs-footer-269 .cs-footer-bottom {
+    border-top: 1px solid rgba(245, 242, 238, 0.15);
+    margin-top: 3rem;
+    padding: 1.5rem 1rem 0;
+    width: 100%;
+}
+
+#cs-footer-269 .cs-footer-bottom-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#cs-footer-269 .cs-footer-bottom p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(245, 242, 238, 0.6);
+}
+
+#cs-footer-269 .cs-footer-bottom a {
+    color: #7A1C1C;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+#cs-footer-269 .cs-footer-bottom a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Ajustement responsive */
+@media only screen and (max-width: 48rem) {
+    #cs-footer-269 .cs-footer-bottom {
+        margin-top: 2rem;
+        padding: 1rem 1rem 0;
+    }
+    
+    #cs-footer-269 .cs-footer-bottom p {
+        font-size: 0.75rem;
+    }
+}
+
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #cs-footer-269 .cs-container {
