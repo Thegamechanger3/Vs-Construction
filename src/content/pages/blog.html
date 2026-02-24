@@ -1,13 +1,12 @@
 ---
-title: "Blog | Code Stitch Web Designs"
-description: "Meta description for the page"
+title: "Nos Réalisations | VS Construction"
+description: "Découvrez nos chantiers récents au Luxembourg : extensions, rénovations, maçonnerie et aménagements extérieurs."
 permalink: "/blog/"
 ---
 
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/blog.css">
 {% endblock %}
 
@@ -18,10 +17,10 @@ permalink: "/blog/"
 
     <div id="banner-310">
         <div class="cs-container">
-            <span class="cs-int-title">Blog</span>
+            <span class="cs-int-title">Nos Réalisations</span>
             <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/blog/" class="cs-link cs-active">Blog</a>
+                <a href="/" class="cs-link">Accueil</a>
+                <a href="/realisations/" class="cs-link cs-active">Réalisations</a>
             </div>
         </div>
         <!--Background Image-->
@@ -38,58 +37,215 @@ permalink: "/blog/"
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
             <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="chantier de construction" width="1920" height="482" loading="eager" decoding="async">
         </picture>
     </div>
 
     <!-- ============================================ -->
-    <!--                 Blog Listings                -->
+    <!--                 PORTFOLIO                    -->
     <!-- ============================================ -->
 
-    <div id="blog-listing">
-        <div class="cs-container">
-            {% if collections.post | length == 0 %}
-                <h1 class="cs-title">No Recent Posts</h1>
-            {% else %}
-                {%- for post in collections.post | reverse -%}
-                    <article class="cs-article">
-                        <picture class="cs-article-image">
-                            <!--Mobile Image-->
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | jpeg %}" type="image/jpeg">
-                            <!--Tablet Image-->
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
-                            <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
-                            <!--Desktop Image-->
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | avif %}" type="image/avif">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | webp %}" type="image/webp">
-                            <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" type="image/jpeg">
-                            <img src="{% getUrl post.data.image | resize({ width: 1648, height: 800 }) | jpeg %}" alt="{{ post.data.alt }}" width="824" height="400" decoding="async">
-                        </picture>
-                        <div class="cs-article-group">
-                            <div class="cs-author-group">
-                                <picture class="cs-author-img">
-                                    <img src="/assets/svgs/profile.svg" alt="Profile icon" width="32" height="32" decoding="async" loading="lazy" aria-hidden="true"/>
-                                </picture>
-                                <span class="cs-author-name">{{ post.data.author }}</span>
-                                <span aria-hidden="true" class="cs-dot"></span>
-                                <span class="cs-date">{{ post.date | postDate }}</span>
-                            </div>
-                            <h2 class="cs-article-title">
-                                {{ post.data.title }}
-                            </h2>
-                            <p class="cs-article-desc">
-                                {{ post.data.description }}
-                            </p>
-                            <a href="{{ post.url }}" class="cs-button-solid">Continue Reading</a>
-                        </div>
-                    </article>
-                {%- endfor -%}
-            {% endif %}
+    <!-- FILTRES -->
+    <div class="filters-bar">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="tous">Tous</button>
+            <button class="filter-btn" data-filter="maconnerie">Maçonnerie</button>
+            <button class="filter-btn" data-filter="extension">Extensions</button>
+            <button class="filter-btn" data-filter="renovation">Rénovations</button>
+            <button class="filter-btn" data-filter="exterieur">Aménagements ext.</button>
         </div>
-
-        {% include 'components/featured-posts.html' %}
+        <div class="filter-count">Affichage : <span id="count">15</span> réalisations</div>
     </div>
+
+    <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Projets de Construction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Section Portfolio -->
+    <section class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>NOS RÉALISATIONS</h2>
+                <p>Une sélection de nos projets de construction</p>
+            </div>
+
+            <!-- Grille de photos -->
+            <div class="portfolio-grid">
+                <!-- Projet 1 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/piscine.jpg" alt="Villa moderne avec piscine">
+                    <div class="portfolio-caption">
+                        <h3>Aménagements Extérieurs</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 2 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/piscine2.jpg" alt="Immeuble de bureaux moderne">
+                    <div class="portfolio-caption">
+                        <h3>Aménagements Extérieurs</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 3 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/amegmt_ext.jpg" alt="Rénovation d'une maison ancienne">
+                    <div class="portfolio-caption">
+                        <h3>Aménagements Extérieurs</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 4 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/int.jpg" alt="Maison contemporaine">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 5 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/int2.jpg" alt="Centre commercial">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 6 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/esc.jpg" alt="Rénovation d'appartement">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 7 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/maison.jpg" alt="Pont moderne">
+                    <div class="portfolio-caption">
+                        <h3>Maçonnerie</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 8 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/maison2.jpg" alt="Bâtiment public">
+                    <div class="portfolio-caption">
+                        <h3>Maçonnerie</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 9 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/sdb.jpg" alt="Maison écologique">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+                <!-- Projet 10 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/sdb2.jpg" alt="Pont moderne">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 11 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/sdb3.jpg" alt="Bâtiment public">
+                    <div class="portfolio-caption">
+                        <h3>Aménagement Intérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 12 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/charpente.jpg" alt="Maison écologique">
+                    <div class="portfolio-caption">
+                        <h3>Charpente extérieur</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+                <!-- Projet 13 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/maison3.jpg" alt="Pont moderne">
+                    <div class="portfolio-caption">
+                        <h3>Maçonnerie</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 8 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/maison4.jpg" alt="Bâtiment public">
+                    <div class="portfolio-caption">
+                        <h3>Maçonnerie</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+                <!-- Projet 9 -->
+                <div class="portfolio-item">
+                    <img src="/assets/images/portfolio/maison5.jpg" alt="Maison écologique">
+                    <div class="portfolio-caption">
+                        <h3>Maçonnerie</h3>
+                        <p>Luxembourg</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>
+    
+
+    <!-- ============================================ -->
+    <!--                 CTA SECTION                  -->
+    <!-- ============================================ -->
+
+    <div id="cta-51">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Votre projet</span>
+                <h2 class="cs-title">Prêt à réaliser votre chantier ?</h2>
+                <p class="cs-text">
+                    Contactez-nous pour un devis gratuit et personnalisé. Nous nous déplaçons sur place pour discuter de votre projet.
+                </p>
+                <a href="/contact/" class="cs-button-solid">Demander un devis</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 632 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 632 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 632 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet and above-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2560, height: 844 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2560, height: 844 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2560, height: 844 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2560, height: 844 }) | jpeg %}" alt="Chantier de construction" width="2560" height="844" loading="lazy" decoding="async">
+        </picture>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    <script src="/assets/js/portfolio.js"></script>
 {% endblock %}
