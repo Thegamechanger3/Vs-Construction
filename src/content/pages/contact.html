@@ -15,106 +15,147 @@ permalink: "/contact/"
 {% block body %}
 
     <!-- ============================================ -->
-    <!--                   Banner                     -->
-    <!-- ============================================ -->
+<!--              CONTACT - VS CONSTRUCTION       -->
+<!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Contact Us</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/contact/" class="cs-link cs-active">Contact Us</a>
-            </div>
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <div style="position:relative;z-index:1;">
+    <div class="breadcrumb"><a href="/">Accueil</a><span>/</span><span class="current">Contact</span></div>
+    <div class="section-label"><span>Parlons de votre projet</span></div>
+    <h1 class="page-title">CON<span class="outline">TACT</span></h1>
+  </div>
+  <div style="position:relative;z-index:1;">
+    <p style="color:rgba(255,255,255,.4);font-size:15px;line-height:1.85;">Appelez-nous directement ou remplissez le formulaire. Nous répondons personnellement dans les 48h — pas un standard, pas un secrétariat.</p>
+  </div>
+</div>
+
+<!-- CONTACT DIRECT -->
+<div class="contact-direct">
+  <div class="contact-direct-inner">
+    <div class="contact-item">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .98h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+      <div>
+        <div class="contact-item-label">Téléphone</div>
+        <div class="contact-item-value"><a href="tel:+352691828820">691 828 820</a></div>
+        <div class="contact-item-sub">Lun–Ven, 8h–17h</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+      <div>
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value"><a href="mailto:info@vs-construction.lu">info@vs-construction.lu</a></div>
+        <div class="contact-item-sub">Réponse sous 48h</div>
+      </div>
+    </div>
+    <div class="contact-item">
+      <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-5.5 8-11a8 8 0 00-16 0c0 5.5 8 11 8 11z"/><circle cx="12" cy="11" r="3"/></svg></div>
+      <div>
+        <div class="contact-item-label">Zone d'intervention</div>
+        <div class="contact-item-value">Luxembourg & Grande Région</div>
+        <div class="contact-item-sub">Rayon ~50 km autour du Luxembourg</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FORM + INFO -->
+<div class="contact-main">
+  <div class="form-wrap">
+    <h2 class="form-title">Demandez votre <em>devis gratuit</em></h2>
+    <p class="form-sub">Nous nous déplaçons sur place avant de chiffrer. Remplissez ce formulaire, nous vous rappelons pour fixer un rendez-vous.</p>
+
+    <div id="formContainer">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="prenom">Prénom *</label>
+          <input type="text" id="prenom" placeholder="Jean">
         </div>
-        <!--Background Image-->
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+        <div class="form-group">
+          <label for="nom">Nom *</label>
+          <input type="text" id="nom" placeholder="Dupont">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tel">Téléphone *</label>
+          <input type="tel" id="tel" placeholder="691 828 820">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="jean@email.lu">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="ville">Ville du chantier *</label>
+        <input type="text" id="ville" placeholder="Luxembourg, Esch, Mamer...">
+      </div>
+      <div class="form-group">
+        <label for="type">Type de travaux *</label>
+        <select id="type">
+          <option value="" disabled selected>Choisissez une prestation</option>
+          <option>Maçonnerie & Gros œuvre</option>
+          <option>Charpente & Couverture</option>
+          <option>Rénovation & Aménagement</option>
+          <option>Extension / Surélévation</option>
+          <option>Aménagement extérieur</option>
+          <option>Autre — à préciser</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Décrivez votre projet</label>
+        <textarea id="message" placeholder="En quelques mots : quelle surface, quel délai souhaité, contraintes particulières..."></textarea>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="rgpd">
+        <label for="rgpd">J'accepte que mes coordonnées soient utilisées pour traiter ma demande de devis. Aucune donnée ne sera transmise à des tiers.</label>
+      </div>
+      <button class="btn-submit" onclick="submitForm()">Envoyer ma demande de devis</button>
     </div>
 
-    <!-- ============================================ -->
-    <!--                Contact Form                  -->
-    <!-- ============================================ -->
+    <div class="form-success" id="formSuccess">
+      <div class="success-icon"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+      <div class="success-title">Demande envoyée !</div>
+      <p class="success-text">Merci pour votre message. Nous vous rappelons dans les 48h pour fixer un rendez-vous sur place.</p>
+    </div>
+  </div>
 
-    <section id="cs-contact-265">
-        <div class="cs-container">
-            <div class="cs-left-section">
-                <div class="cs-content">
-                    <span class="cs-topper">Contact</span>
-                    <h2 class="cs-title">Get in Touch</h2>
-                    <p class="cs-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ridiculus elementum ullamcorper ipsum porttitor aliquam. Id magna urna ultrices odio pulvinar. Sed ut.
-                    </p>
-                </div>
-                <form id="cs-form-265" name="Contact Form" method="post">
-                    <label>
-                        Name
-                        <input required type="text" id="name-265" name="name" placeholder="Name">
-                    </label>
-                    <label>
-                        Email
-                        <input required type="text" id="email-265" name="email" placeholder="Email">
-                    </label>
-                    <label>
-                        Phone
-                        <input required type="text" id="phone-265" name="phone" placeholder="Phone">
-                    </label>
-                    <label>
-                        How Did You Find Us
-                        <input type="text" id="find-265" name="find-us" placeholder="How did you find us?">
-                    </label>
-                    <label class="cs-label-message">
-                        Message
-                        <textarea required name="Message" id="message-265" placeholder="Write message..."></textarea>
-                    </label>
-                    <button class="cs-button-solid cs-submit" type="submit">Submit Message</button>
-                </form>
-            </div>
-            <div class="cs-right-section">
-                <!--Email-->
-                <span class="cs-header">Email</span>
-                <a class="cs-link" href="mailto:{{ client.email }}">{{ client.email }}</a>
-                <!--Phone-->
-                <span class="cs-header">Phone</span>
-                <a class="cs-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a>
-                <!--Address-->
-                <span class="cs-header">Address</span>
-                <a class="cs-link" href="{{ client.address.mapLink }}">
-                    {{ client.address.lineOne }}, <br>
-                    {{ client.address.lineTwo }}, <br>
-                    {{ client.address.city }}, {{ client.address.state }}
-                    {{ client.address.zip }}
-                </a>
-                <!-- Background Image-->
-                <picture class="cs-bg-picture">
-                    <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | jpeg %}" type="image/jpeg">
-                    <!--Tablet Image-->
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | avif %}" type="image/avif">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | webp %}" type="image/webp">
-                    <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 820, height: 1372 }) | jpeg %}" type="image/jpeg">
-                    <!--Desktop Image-->
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | avif %}" type="image/avif">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | webp %}" type="image/webp">
-                    <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" type="image/jpeg">
-                    <img src="{% getUrl "/assets/images/construction.jpg" | resize({ width: 1084, height: 1156 }) | jpeg %}" alt="building" width="542" height="578" decoding="async">
-                </picture>
-            </div>
+  <div class="contact-info">
+    <div>
+      <div class="info-block">
+        <div class="info-label">Téléphone direct</div>
+        <div class="info-value"><a href="tel:+352691828820">691 828 820</a></div>
+        <div class="info-sub">Si vous préférez parler directement, c'est nous qui décrochons. Lun–Ven de 8h à 17h.</div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-block">
+        <div class="info-label">Devis gratuit</div>
+        <div class="info-value">Déplacement sur place</div>
+        <div class="info-sub">Pas de devis à l'aveugle. Nous venons voir votre chantier en personne avant de vous donner un prix.</div>
+      </div>
+      <div class="info-divider"></div>
+      <div class="info-block">
+        <div class="info-label">Zone d'intervention</div>
+        <div class="info-value">Luxembourg</div>
+        <div class="zone-tags">
+          <span class="zone-tag">Luxembourg-Ville</span>
+          <span class="zone-tag">Esch</span>
+          <span class="zone-tag">Mamer</span>
+          <span class="zone-tag">Strassen</span>
+          <span class="zone-tag">Bertrange</span>
+          <span class="zone-tag">Differdange</span>
+          <span class="zone-tag">Dudelange</span>
+          <span class="zone-tag">Et alentours</span>
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="info-note">
+      <p><strong>Assurance décennale en cours de validité.</strong> Nous pouvons vous fournir une attestation sur demande avant le démarrage des travaux.</p>
+    </div>
+  </div>
+</div>
+
+<script src="src/assets/js/contact.js"></script>
 
 {% endblock %}
