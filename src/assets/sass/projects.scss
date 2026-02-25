@@ -630,3 +630,169 @@
     }
 }
 
+
+/*-- -------------------------- -->
+<---   SERVICES DÉTAILLÉS - MOBILE -->
+<--- -------------------------- -*/
+
+/* Mobile - jusqu'à 768px */
+@media only screen and (max-width: 48rem) {
+    /* Tous les services en colonne */
+    .service-row {
+        display: flex !important;
+        flex-direction: column !important;
+        border-bottom: 1px solid var(--borderColor, #DADADA);
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    
+    /* Force l'ordre : image en premier, texte après */
+    .service-img-wrap {
+        order: 1 !important;
+        width: 100%;
+        height: 250px;
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .service-content {
+        order: 2 !important;
+        padding: 0 20px 20px 20px;
+        width: 100%;
+    }
+    
+    /* Enlève les backgrounds alternés sur mobile */
+    .service-row:nth-child(even) .service-content,
+    .service-row:nth-child(odd) .service-content {
+        background: transparent;
+    }
+    
+    .service-num-big {
+        font-size: 70px;
+        margin-bottom: -15px;
+    }
+    
+    .service-content-title {
+        font-size: 26px;
+        margin-bottom: 15px;
+    }
+    
+    .service-content-desc {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+    
+    .service-list {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    
+    .service-list li {
+        font-size: 13px;
+        gap: 10px;
+    }
+    
+    .service-list li::before {
+        width: 5px;
+        height: 5px;
+        margin-top: 6px;
+    }
+    
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 11px;
+    }
+    
+    /* ZONE INTERVENTION - Mobile */
+    .zone {
+        padding: 50px 20px;
+    }
+    
+    .zone-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .zone-title {
+        font-size: 28px;
+    }
+    
+    .zone-title em {
+        display: block;
+    }
+    
+    .zone-desc {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .zone-villes {
+        justify-content: center;
+        gap: 8px;
+    }
+    
+    .ville-tag {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+    
+    .zone-img-wrap {
+        height: 250px;
+    }
+}
+
+/* Petit mobile - jusqu'à 480px */
+@media only screen and (max-width: 30rem) {
+    .service-img-wrap {
+        height: 200px;
+    }
+    
+    .service-content {
+        padding: 0 15px 15px 15px;
+    }
+    
+    .service-num-big {
+        font-size: 60px;
+    }
+    
+    .service-content-title {
+        font-size: 22px;
+    }
+    
+    .service-content-desc {
+        font-size: 13px;
+    }
+    
+    .service-list li {
+        font-size: 12px;
+    }
+    
+    .btn-primary {
+        padding: 10px 15px;
+        font-size: 10px;
+    }
+    
+    .zone {
+        padding: 40px 15px;
+    }
+    
+    .zone-title {
+        font-size: 24px;
+    }
+    
+    .zone-desc {
+        font-size: 13px;
+    }
+    
+    .zone-img-wrap {
+        height: 200px;
+    }
+    
+    .ville-tag {
+        padding: 5px 12px;
+        font-size: 10px;
+    }
+}
