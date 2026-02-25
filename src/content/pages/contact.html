@@ -109,9 +109,11 @@ permalink: "/contact/"
         <textarea id="message" placeholder="En quelques mots : quelle surface, quel délai souhaité, contraintes particulières..."></textarea>
       </div>
       <div class="form-check">
-        <input type="checkbox" id="rgpd">
-        <label for="rgpd">J'accepte que mes coordonnées soient utilisées pour traiter ma demande de devis. Aucune donnée ne sera transmise à des tiers.</label>
-      </div>
+    <label style="display: flex; align-items: flex-start; gap: 12px; cursor: pointer;">
+        <input type="checkbox" id="rgpd" style="width: 18px; height: 18px; margin-top: 2px; accent-color: #7A1C1C;">
+        <span style="font-size: 13px; color: var(--bodyTextColor);">J'accepte que mes coordonnées soient utilisées pour traiter ma demande de devis. Aucune donnée ne sera transmise à des tiers.</span>
+    </label>
+    </div>
       <!-- Dans ton formulaire, avant le bouton submit -->
       <input type="hidden" name="recaptcha_token" id="recaptchaToken">
       <button class="btn-submit" onclick="submitForm()">Envoyer ma demande de devis</button>

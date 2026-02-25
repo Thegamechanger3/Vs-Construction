@@ -301,3 +301,74 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
 }
+/* Mobile - Filtres en accordéon */
+@media only screen and (max-width: 48rem) {
+    .filters-bar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    
+    .filters {
+        width: 100%;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 0;
+    }
+    
+    .filters-bar.active .filters {
+        max-height: 300px;
+        opacity: 1;
+        margin-top: 15px;
+    }
+    
+    .filter-btn {
+        padding: 10px 15px;
+        font-size: 11px;
+        background: #f0f0f0;
+        border-radius: 30px;
+        width: auto;
+    }
+    
+    .filter-btn::after {
+        display: none;
+    }
+    
+    .filter-btn.active {
+        background: #7A1C1C;
+        color: white;
+    }
+    
+    .filter-toggle {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: #f0f0f0;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+    
+    .filter-toggle::after {
+        content: "▼";
+        margin-left: 10px;
+        font-size: 12px;
+    }
+    
+    .filters-bar.active .filter-toggle::after {
+        content: "▲";
+    }
+    
+    .filter-count {
+        display: block;
+        margin-top: 10px;
+        text-align: center;
+    }
+}

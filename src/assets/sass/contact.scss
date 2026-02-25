@@ -910,3 +910,28 @@ select {
         font-size: 8px;
     }
 }
+
+.form-check {
+    position: relative;
+    z-index: 10;
+}
+
+.form-check input[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 20 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    accent-color: #7A1C1C;
+}
+
+.form-check label {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
