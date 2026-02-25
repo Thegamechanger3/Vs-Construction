@@ -12,109 +12,166 @@ permalink: "/project-one/"
 
 {% block body %}
 
+  <!-- ============================================ -->
+<!--                   BANNER                     -->
+<!-- ============================================ -->
+
+<div class="page-header">
+  <div class="page-header-inner">
+    <div>
+      <div class="breadcrumb"><a href="/">Accueil</a><span>/</span><span class="current">Services</span></div>
+      <div class="section-label"><span>Nos prestations</span></div>
+      <h1 class="page-title">NOS<br><span class="outline">SER</span>VICES</h1>
+    </div>
+    <div class="page-header-right">
+      <p>Tous nos travaux de construction et rénovation pour particuliers et professionnels. Du gros œuvre aux finitions, nous accompagnons votre projet avec sérieux et transparence.</p>
+    </div>
+  </div>
+</div>
+
     <!-- ============================================ -->
-    <!--                   Banner                     -->
+    <!--               SERVICES DÉTAILLÉS             -->
     <!-- ============================================ -->
 
-    <div id="banner-310">
-        <div class="cs-container">
-            <span class="cs-int-title">Project One Gallery</span>
-            <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link">Home</a>
-                <a href="/project-one/" class="cs-link cs-active">Project One Gallery</a>
+    <div class="services-detail">
+
+        <!-- Service 1 - Maçonnerie & Gros œuvre -->
+        <div class="service-row reveal">
+            <div class="service-img-wrap">
+                <img class="service-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Maçonnerie gros œuvre">
+                <div class="service-img-overlay"></div>
+            </div>
+            <div class="service-content">
+                <div class="service-num-big">01</div>
+                <h2 class="service-content-title">Maçonnerie & Gros œuvre</h2>
+                <p class="service-content-desc">La base de toute construction solide. Nous réalisons vos fondations, dalles béton, murs porteurs et structures en béton armé dans le respect des normes luxembourgeoises.</p>
+                <ul class="service-list">
+                    <li>Fondations superficielles et profondes</li>
+                    <li>Dalles béton et chapes</li>
+                    <li>Murs porteurs en parpaing ou béton</li>
+                    <li>Poteaux, poutres et structures béton</li>
+                </ul>
+                <a href="/contact/" class="btn-primary">Demander un devis</a>
             </div>
         </div>
-        <!--Background Image-->
 
-        <picture class="cs-background">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
-            <!--Tablet Image-->
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
-            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
-            <!--Desktop Image-->
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
-            <img src="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
-        </picture>
+        <!-- Service 2 - Charpente & Couverture -->
+        <div class="service-row reveal">
+            <div class="service-content">
+                <div class="service-num-big">02</div>
+                <h2 class="service-content-title">Charpente & Couverture</h2>
+                <p class="service-content-desc">Une toiture solide et bien isolée. Nous travaillons avec des artisans couvreurs partenaires pour vous offrir un service complet de la charpente à la couverture.</p>
+                <ul class="service-list">
+                    <li>Charpente traditionnelle ou fermette</li>
+                    <li>Couverture en ardoise, tuile ou bac acier</li>
+                    <li>Zinguerie et évacuations</li>
+                    <li>Isolation de toiture</li>
+                </ul>
+                <a href="/contact/" class="btn-primary">Demander un devis</a>
+            </div>
+            <div class="service-img-wrap">
+                <img class="service-img" src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=900&q=80" alt="Charpente bois">
+                <div class="service-img-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Service 3 - Extensions & Surélévations -->
+        <div class="service-row reveal">
+            <div class="service-img-wrap">
+                <img class="service-img" src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=900&q=80" alt="Extension maison">
+                <div class="service-img-overlay"></div>
+            </div>
+            <div class="service-content">
+                <div class="service-num-big">03</div>
+                <h2 class="service-content-title">Extensions & Surélévations</h2>
+                <p class="service-content-desc">Vous manquez de place sans vouloir déménager ? Nous agrandissons votre maison avec une extension maçonnée ou une surélévation, en harmonie avec l'existant.</p>
+                <ul class="service-list">
+                    <li>Extension de pièce de vie, cuisine, chambre</li>
+                    <li>Surélévation d'un étage complet</li>
+                    <li>Garage attenant</li>
+                    <li>Véranda maçonnée</li>
+                </ul>
+                <a href="/contact/" class="btn-primary">Demander un devis</a>
+            </div>
+        </div>
+
+        <!-- Service 4 - Rénovation & Aménagement -->
+        <div class="service-row reveal">
+            <div class="service-content">
+                <div class="service-num-big">04</div>
+                <h2 class="service-content-title">Rénovation & Aménagement</h2>
+                <p class="service-content-desc">Redonnez vie à votre intérieur avec nos travaux de rénovation complète. Nous transformons vos espaces pour les adapter à vos besoins et aux normes actuelles.</p>
+                <ul class="service-list">
+                    <li>Rénovation complète d'appartement ou maison</li>
+                    <li>Aménagement de combles</li>
+                    <li>Ouverture de murs porteurs</li>
+                    <li>Réfection de sols et cloisons</li>
+                </ul>
+                <a href="/contact/" class="btn-primary">Demander un devis</a>
+            </div>
+            <div class="service-img-wrap">
+                <img class="service-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Rénovation intérieure">
+                <div class="service-img-overlay"></div>
+            </div>
+        </div>
+
+        <!-- Service 5 - Aménagements extérieurs -->
+        <div class="service-row reveal">
+            <div class="service-img-wrap">
+                <img class="service-img" src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Terrasse extérieure">
+                <div class="service-img-overlay"></div>
+            </div>
+            <div class="service-content">
+                <div class="service-num-big">05</div>
+                <h2 class="service-content-title">Aménagements extérieurs</h2>
+                <p class="service-content-desc">Valorisez votre terrain avec des aménagements durables et esthétiques. Terrasses, murets, clôtures et allées en béton ou pierre naturelle pour un extérieur à votre image.</p>
+                <ul class="service-list">
+                    <li>Terrasses en béton, pierre ou bois</li>
+                    <li>Murets de clôture et de soutènement</li>
+                    <li>Allées et parkings</li>
+                    <li>Margelles de piscine</li>
+                </ul>
+                <a href="/contact/" class="btn-primary">Demander un devis</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- ============================================ -->
+    <!--               ZONE D'INTERVENTION            -->
+    <!-- ============================================ -->
+
+    <div class="zone">
+        <div class="zone-inner">
+            <div>
+                <div class="section-label"><span>Où nous intervenons</span></div>
+                <h2 class="zone-title">Zone d'intervention <em>locale</em></h2>
+                <p class="zone-desc">Nous travaillons principalement au Luxembourg et dans la Grande Région (jusqu'à 50 km autour de Luxembourg-Ville). Pour les gros chantiers, nous pouvons nous organiser plus loin — n'hésitez pas à nous demander.</p>
+                <div class="zone-villes">
+                    <span class="ville-tag">Luxembourg-Ville</span>
+                    <span class="ville-tag">Esch</span>
+                    <span class="ville-tag">Mamer</span>
+                    <span class="ville-tag">Strassen</span>
+                    <span class="ville-tag">Bertrange</span>
+                    <span class="ville-tag">Differdange</span>
+                    <span class="ville-tag">Dudelange</span>
+                    <span class="ville-tag">Diekirch</span>
+                    <span class="ville-tag">Rumelange</span>
+                    <span class="ville-tag">Grevenmacher</span>
+                    <span class="ville-tag">Remich</span>
+                    <span class="ville-tag">Troisvierges</span>
+                    <span class="ville-tag">Redange</span>
+                    <span class="ville-tag">Ettelbruck</span>
+                    <span class="ville-tag">Wiltz</span>
+                    <span class="ville-tag">Et alentours</span>
+                </div>
+            </div>
+            <div class="zone-img-wrap">
+                <img class="zone-img" src="/assets/images/Luxembourg.jpg" alt="Carte zone intervention">
+                <div class="zone-img-overlay"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery-48">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Our Portfolio</span>
-                <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            </div>
-            <div class="cs-image-group">
-                <div class="cs-row cs-row-1">
-                    <!-- Row 1-->
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" width="420" height="567">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" width="420" height="630">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" width="420" height="512">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" width="420" height="492">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" width="420" height="517">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <picture class="cs-picture cs-picture-1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new black window structure" width="420" height="625">
-                    </picture>
-                    <picture class="cs-picture cs-picture-2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="kitchen rebovation" width="420" height="452">
-                    </picture>
-                    <picture class="cs-picture cs-picture-3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img loading="lazy" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="bathroom renovation" width="420" height="629">
-                    </picture>
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                </div>
-            </div>
-            <a href="/contact/" class="cs-button-solid">Get Started</a>
-        </div>
-    </section>
 
     {% include 'sections/cta.html' %}
 

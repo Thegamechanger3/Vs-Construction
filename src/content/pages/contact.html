@@ -10,6 +10,7 @@ permalink: "/contact/"
     <link rel="stylesheet" href="/assets/css/contact.css">
     <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
     <link rel="preload" as="image" href="{% getUrl "/assets/images/construction.jpg" | resize({ width: 576, height: 640 }) | avif %}"/>
+    <script src="https://www.google.com/recaptcha/api.js?render=TA_CLE_SITE"></script>
 {% endblock %}
 
 {% block body %}
@@ -111,6 +112,8 @@ permalink: "/contact/"
         <input type="checkbox" id="rgpd">
         <label for="rgpd">J'accepte que mes coordonnées soient utilisées pour traiter ma demande de devis. Aucune donnée ne sera transmise à des tiers.</label>
       </div>
+      <!-- Dans ton formulaire, avant le bouton submit -->
+      <input type="hidden" name="recaptcha_token" id="recaptchaToken">
       <button class="btn-submit" onclick="submitForm()">Envoyer ma demande de devis</button>
     </div>
 
@@ -146,6 +149,14 @@ permalink: "/contact/"
           <span class="zone-tag">Bertrange</span>
           <span class="zone-tag">Differdange</span>
           <span class="zone-tag">Dudelange</span>
+          <span class="zone-tag">Diekirch</span>
+          <span class="zone-tag">Rumelange</span>
+          <span class="zone-tag">Grevenmacher</span>
+          <span class="zone-tag">Remich</span>
+          <span class="zone-tag">Troisvierges</span>
+          <span class="zone-tag">Redange</span>
+          <span class="zone-tag">Ettelbruck</span>
+          <span class="zone-tag">Wiltz</span>
           <span class="zone-tag">Et alentours</span>
         </div>
       </div>
